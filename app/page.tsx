@@ -14,6 +14,7 @@ import ProcessCard from "@/components/ProcessCard";
 import { cars, workProcess } from "@/utils/data";
 import CarCard from "@/components/CarCard";
 import Slide from "@/components/Slide";
+import FormSubmit from "@/components/FormSubmit";
 
 export default function Home() {
   return (
@@ -172,6 +173,15 @@ export default function Home() {
             number={3}
             tailwindValue={`md:w-[600px] lg:w-full w-[300px] rounded-md mx-auto`}
           />
+        </div>
+      </div>
+      <div className=" container lg:w-[1596px] mt-10">
+        <Head
+          title="Contact Us"
+          para="Feel free to reach out using the contact form below for any questions or feedback"
+        />
+        <div className="flex justify-center items-center">
+          <FormSubmit />
         </div>
       </div>
     </section>
