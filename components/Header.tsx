@@ -20,11 +20,9 @@ const Header: React.FC = () => {
   useEffect(() => {
     const currentPath = window.location.pathname;
     const currentLink = links.find(
-      (link) =>
-        currentPath === `/${link.toLowerCase()}` // Special handling for the Home route
+      (link) => currentPath === `/${link.toLowerCase()}` // Special handling for the Home route
     );
 
-  
     if (currentLink) {
       setActive(currentLink); // Set the current active link based on the URL
     }
@@ -66,23 +64,25 @@ const Header: React.FC = () => {
         {/* Desktop Navigation Menu (visible on large screens) */}
         <div className="hidden lg:flex justify-center items-center gap-10">
           {links.map((link, index) => (
-            <div
+            <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
               key={index}
-              className={`font-[500] ${
-                link === active ? "bg-[#8F94FB] px-3 py-1 rounded-lg" : ""
+              className={`font-[500] text-white transition duration-300 ease-in-out ${
+                link === active
+                  ? "bg-[#6e73f5] px-3 py-1 rounded-lg"
+                  : "hover:bg-[#6e73f5] hover:rounded-lg px-3 py-1"
               }`}
               onClick={() => handleClick2(link)} // Set the clicked link as active
             >
-              <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
+              
                 {link}
-              </Link>
-            </div>
+              
+            </Link>
           ))}
         </div>
 
         {/* Contact Us Button for Desktop */}
         <div className="hidden lg:flex">
-          <button className="w-[135px] h-[59px] bg-[#8F94FB] rounded-lg text-[18px]">
+          <button className="w-[135px] h-[59px] bg-[#6e73f5] rounded-lg text-[18px] text-white transition duration-300 ease-in-out transform hover:bg-[#6e73f5] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#8F94FB] focus:ring-opacity-50">
             Contact Us
           </button>
         </div>
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`lg:hidden fixed left-0 w-full h-screen z-40 transition-transform duration-500 ease-in-out transform ${
+        className={`lg:hidden fixed left-0 w-full bg-[#171717] h-screen z-40 transition-transform duration-500 ease-in-out transform ${
           nav ? "translate-x-0" : "-translate-x-full" // Slide menu in/out from the left
         }`}
       >
@@ -112,11 +112,14 @@ const Header: React.FC = () => {
                 handleClick(); // Close the mobile menu after clicking
               }}
               key={index}
-              className={`w-full text-center hover:bg-[#8F94FB] font-[500] py-2 ${
-                link === active ? "bg-[#8F94FB]" : "" // Highlight the active link
+              className={`w-full text-center transition duration-300 ease-in-out font-[500] py-2 rounded-lg ${
+                link === active ? "bg-[#6e73f5]" : "hover:bg-[#6e73f5]"
               }`}
             >
-              <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
+              <Link
+                href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+                className="text-white"
+              >
                 {link}
               </Link>
             </div>
@@ -125,7 +128,7 @@ const Header: React.FC = () => {
 
         {/* Contact Us Button for Mobile */}
         <div className="flex justify-center items-center mt-8">
-          <button className="w-[135px] h-[59px] bg-[#8F94FB] rounded-lg text-[18px]">
+          <button className="w-[135px] h-[59px] bg-[#8F94FB] rounded-lg text-[18px] text-white transition duration-300 ease-in-out transform hover:bg-[#6e73f5] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#8F94FB] focus:ring-opacity-50">
             Contact Us
           </button>
         </div>
