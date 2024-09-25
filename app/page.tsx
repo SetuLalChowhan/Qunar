@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <section>
       <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[800px] "
+        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[500px] md:h-[800px] "
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60">
