@@ -39,9 +39,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <section className="container sticky top-0 z-50">
+    <section className=" sticky top-0 z-50 bg-[#171717]">
       {/* Header Container */}
-      <div className="flex justify-between items-center p-4">
+      <div className=" container flex justify-between items-center p-4">
         {/* Logo & Title Section */}
         <Link
           href="/"

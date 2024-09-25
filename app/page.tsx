@@ -5,6 +5,11 @@ import zoom from "../public/images/zoom.png";
 import slack from "../public/images/slack.png";
 import amazon from "../public/images/amazon.png";
 import adobe from "../public/images/adobe.png";
+import ui from "../public/images/ui.png";
+import brand from "../public/images/branding.png";
+import video from "../public/images/video.png";
+import production from "../public/images/production.png";
+import Head from "../components/Head";
 
 export default function Home() {
   return (
@@ -33,17 +38,83 @@ export default function Home() {
             </h2>
           </div>
           <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-2 flex-wrap flex justify-center items-center rounded-lg max-w-4x ">
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={zapier} alt="zapier" />
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={spotify} alt="zapier" />
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={zoom} alt="zapier" />
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={slack} alt="zapier" />
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={amazon} alt="zapier" />
-            <Image className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]" src={adobe} alt="zapier" />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={zapier}
+              alt="zapier"
+            />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={spotify}
+              alt="zapier"
+            />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={zoom}
+              alt="zapier"
+            />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={slack}
+              alt="zapier"
+            />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={amazon}
+              alt="zapier"
+            />
+            <Image
+              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
+              src={adobe}
+              alt="zapier"
+            />
           </div>
         </div>
       </div>
-      <div className=" container w-[1320px] h-[470px]">
-
+      <div className="container mx-auto px-4 max-w-[1320px] h-auto py-10">
+        <Head
+          title="Services"
+          para=" Elevate Your Digital Presence with Tailored Solutions That Drive
+      Results"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex justify-between items-center border-2 border-gray-800 p-4 rounded-lg">
+            <div className="flex items-center gap-4">
+              <Image className="w-[30px] h-[30px]" src={ui} alt="UI Design" />
+              <p className="text-[24px] md:text-[36px]">UI Design</p>
+            </div>
+            <p className="w-[16px] h-[16px] bg-[#333333] rounded-full"></p>
+          </div>
+          <div className="flex justify-between items-center border-2 border-gray-800 p-4 rounded-lg">
+            <div className="flex items-center gap-4">
+              <Image className="w-[30px] h-[30px]" src={brand} alt="Branding" />
+              <p className="text-[24px] md:text-[36px]">Branding</p>
+            </div>
+            <p className="w-[16px] h-[16px] bg-[#333333] rounded-full"></p>
+          </div>
+          <div className="flex justify-between items-center border-2 border-gray-800 p-4 rounded-lg">
+            <div className="flex items-center gap-4">
+              <Image
+                className="w-[30px] h-[30px]"
+                src={video}
+                alt="Motion / 3D"
+              />
+              <p className="text-[24px] md:text-[36px]">Motion / 3D</p>
+            </div>
+            <p className="w-[16px] h-[16px] bg-[#333333] rounded-full"></p>
+          </div>
+          <div className="flex justify-between items-center border-2 border-gray-800 p-4 rounded-lg">
+            <div className="flex items-center gap-4">
+              <Image
+                className="w-[30px] h-[30px]"
+                src={production}
+                alt="Video Production"
+              />
+              <p className="text-[24px] md:text-[36px]">Video Production</p>
+            </div>
+            <p className="w-[16px] h-[16px] bg-[#333333] rounded-full"></p>
+          </div>
+        </div>
       </div>
     </section>
   );
