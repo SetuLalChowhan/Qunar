@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <section>
       <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[500px] md:h-[800px] "
+        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[450px] md:h-[800px] "
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60">
@@ -40,11 +40,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center items-center mt-24">
-            <h2 className="bg-[#1A1A1A] p-4 rounded-lg text-lg">
+            <h2 className="bg-[#1A1A1A] p-4 rounded-lg text-lg opacity-70 ">
               Trusted By 250+ Companies
             </h2>
           </div>
-          <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-24 flex-wrap flex justify-center items-center rounded-lg max-w-4x md:mt-2  ">
+          <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-24 flex-wrap flex justify-center items-center rounded-lg max-w-4x md:mt-2 opacity-70 ">
             <Image
               className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
               src={zapier}
