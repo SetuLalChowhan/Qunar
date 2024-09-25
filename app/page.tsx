@@ -15,6 +15,8 @@ import { cars, workProcess } from "@/utils/data";
 import CarCard from "@/components/CarCard";
 import Slide from "@/components/Slide";
 import FormSubmit from "@/components/FormSubmit";
+import { FaQ } from "react-icons/fa6";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
   return (
@@ -184,6 +186,17 @@ export default function Home() {
           <FormSubmit />
         </div>
       </div>
+      <div className=" container lg:w-[1596px] mt-10">
+        <Head
+          title="FaQ"
+          para="Feel free to reach out using the contact form below for any questions or feedback"
+        />
+        <div>
+          <FaqSection/>
+        </div>
+        
+      </div>
+     
     </section>
   );
 }
