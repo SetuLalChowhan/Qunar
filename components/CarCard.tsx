@@ -17,7 +17,7 @@ const CarCard = ({id,image,title,link,details}:CarDetails) => {
         <Image src={image} alt='car' />
         <h1 className='text-[24px] font-[500]'>{title}</h1>
         <p className='text-[20px] bg-[#262626] lg:px-4 rounded-lg p-2  '>{link}</p>
-        <p className=' text-[20px] text-[#98989A] md:text-justify '>{details}</p>
+        <p className=' md:text-[20px] text-[#98989A] md:text-justify '>{details}</p>
     </div>
   )
 }

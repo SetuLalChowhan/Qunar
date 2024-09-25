@@ -25,7 +25,7 @@ const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
             fill="currentColor"
           />
         </svg>
-        <p className="text-[16px] lg:text-[20px] lg:h-32 font-[400] text-[#8F8F8F]  text-justify">
+        <p className="text-[16px] lg:text-[20px] lg:h-32 font-[400] text-[#8F8F8F]  md:text-justify">
           {review}
         </p>
       </div>

@@ -17,7 +17,7 @@ const ProcessCard = ({id,title,des}:Work) => {
           <div className='border-[1px] border-gray-800 w-full mt-2'></div>
         </div>
       </div>
-      <div className='text-[#8F8F8F] text-[20px] font-[600] text-justify'>
+      <div className='text-[#8F8F8F] md:text-[20px] font-[600] md:text-justify'>
         {des}
       </div>
     </div>

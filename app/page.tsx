@@ -120,46 +120,60 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container lg:w-[1350px] flex flex-col gap-4   px-8 mt-10 ">
+      <div className="container lg:w-[1350px] flex flex-col gap-4  mt-10 ">
         <Head
           title="Work Process"
           para="We follow a structured and collaborative process to ensure the successful delivery of exceptional digital "
         />
-        <div className="lg:w-[434px] lg:h-[64px] bg-[#333333] rounded-lg text-[22px] p-3">
+        <div className="w-full md:w-[300px] lg:w-[434px] h-auto lg:h-[64px] bg-[#333333] rounded-lg text-[18px] md:text-[20px] lg:text-[22px] p-2 md:p-3">
           Here's an overview of our typical process:
         </div>
-        <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
-          {
-            workProcess.map((work,index)=>(
-              <ProcessCard key={index} id={work.id} title={work.title} des={work.description} />
-            ))
-          }
-        </div>
-      </div>
-      <div className="container lg:w-[1350px] mt-10 flex flex-col gap-4">
-        <Head title="Our Work" para="We have The Privilege od Working With a Diverse Range"/>
-        <div className="lg:w-[470px]  bg-[#333333] rounded-lg text-[22px] p-3">
-          Here are Some example of our notable works
-        </div>
-        <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
-          {
-            cars.map((car,index)=>(
-              <CarCard key={index} id={car.id} image={car.image} title={car.title} link={car.link} details={car.details}   />
-            ))
-          }
-        </div>
 
+        <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
+          {workProcess.map((work, index) => (
+            <ProcessCard
+              key={index}
+              id={work.id}
+              title={work.title}
+              des={work.description}
+            />
+          ))}
+        </div>
       </div>
       <div className="container lg:w-[1350px] mt-10 flex flex-col gap-4">
-        <Head title="Trusted Feedback" para="Our Clients Love the Results. Here’s What They’re Saying About Qunar"/>
-        
+        <Head
+          title="Our Work"
+          para="We have The Privilege od Working With a Diverse Range"
+        />
+        <div className="w-full md:w-[350px] lg:w-[500px] h-auto lg:h-[64px] bg-[#333333] rounded-lg text-[18px] md:text-[20px] lg:text-[22px] p-2 md:p-4">
+          Here are some example of our notable works:
+        </div>
+        <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
+          {cars.map((car, index) => (
+            <CarCard
+              key={index}
+              id={car.id}
+              image={car.image}
+              title={car.title}
+              link={car.link}
+              details={car.details}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="container lg:w-[1350px] mt-10 flex flex-col gap-4">
+        <Head
+          title="Trusted Feedback"
+          para="Our Clients Love the Results. Here’s What They’re Saying About Qunar"
+        />
+
         <div className="mt-5  ">
-        <Slide number={3}  tailwindValue={`md:w-[600px] lg:w-full w-[300px] rounded-md mx-auto`} />
-         
+          <Slide
+            number={3}
+            tailwindValue={`md:w-[600px] lg:w-full w-[300px] rounded-md mx-auto`}
+          />
         </div>
-
       </div>
-
     </section>
   );
 }
