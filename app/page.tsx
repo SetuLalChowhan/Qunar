@@ -10,13 +10,15 @@ import brand from "../public/images/branding.png";
 import video from "../public/images/video.png";
 import production from "../public/images/production.png";
 import Head from "../components/Head";
+import ProcessCard from "@/components/ProcessCard";
+import { workProcess } from "@/utils/data";
 
 export default function Home() {
   return (
     <section>
       <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12"
-        style={{ backgroundImage: "url('/images/hero.jpg')", height: "800px" }}
+        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[800px] "
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60">
           <div className="flex flex-col justify-center items-center mt-24 text-center">
@@ -37,7 +39,7 @@ export default function Home() {
               Trusted By 250+ Companies
             </h2>
           </div>
-          <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-2 flex-wrap flex justify-center items-center rounded-lg max-w-4x ">
+          <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-24 flex-wrap flex justify-center items-center rounded-lg max-w-4x md:mt-2  ">
             <Image
               className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
               src={zapier}
@@ -71,7 +73,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 max-w-[1320px] h-auto py-10">
+      <div className="container mx-auto  max-w-[1320px] h-auto px-8 py-10 mt-10">
         <Head
           title="Services"
           para=" Elevate Your Digital Presence with Tailored Solutions That Drive
@@ -114,6 +116,22 @@ export default function Home() {
             </div>
             <p className="w-[16px] h-[16px] bg-[#333333] rounded-full"></p>
           </div>
+        </div>
+      </div>
+      <div className="container lg:w-[1350px] lg:h-[1250px] border-2 border-gray-800 px-8 mt-10">
+        <Head
+          title="Work Process"
+          para="We follow a structured and collaborative process to ensure the successful delivery of exceptional digital "
+        />
+        <div className="lg:w-[434px] lg:h-[64px] bg-[#333333] rounded-lg text-[22px] p-3">
+          Here's an overview of our typical process:
+        </div>
+        <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 ">
+          {
+            workProcess.map((work,index)=>(
+              <ProcessCard key={index} id={work.id} title={work.title} des={work.description} />
+            ))
+          }
         </div>
       </div>
     </section>
