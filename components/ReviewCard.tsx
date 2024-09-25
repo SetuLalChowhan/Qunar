@@ -12,7 +12,7 @@ interface UserDetails {
 
 const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
   return (
-    <div className="w-full lg:w-[424px] lg:h-[352px] px-4 lg:px-8 py-6 border-2 border-gray-800 flex flex-col gap-6 lg:gap-8 rounded-lg">
+    <div className="w-full lg:w-[424px] lg:h-[352px] px-4 lg:px-8 py-6 border-2 border-gray-800 space-y-12 rounded-lg">
       <div className="w-full h-auto lg:mt-8">
         <svg
           className="w-6 text-blue-500 mb-4"

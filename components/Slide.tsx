@@ -37,11 +37,11 @@ const Slide = ({number,tailwindValue}:Details) => {
           slidesPerView: 1,
           spaceBetween: 20,
         },
-        1200: {
+        1000: {
           slidesPerView: 2,
           spaceBetween: 0,
         },
-        1400: {
+        1300: {
           slidesPerView: number, // Adjust to your desired value
           spaceBetween: 20,
         },
