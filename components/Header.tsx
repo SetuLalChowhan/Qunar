@@ -6,39 +6,50 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
-const Header = () => {
-  const links = ["Home", "Services", "Work", "Process", "Contact"];
-  const [active, setActive] = useState("Home");
-  const [nav, setNav] = useState(true);
+const Header: React.FC = () => {
+  // List of links for the navigation menu
+  const links: string[] = ["Home", "Services", "Work", "Process", "Contact"];
 
-  // Set the active link based on the current pathname on component mount
+  // State to track the active link (initially "Home")
+  const [active, setActive] = useState<string>("Home");
+
+  // State to track if the mobile navigation is open or closed (false means closed by default)
+  const [nav, setNav] = useState<boolean>(false);
+
+  // UseEffect hook to set the active link based on the current URL path
   useEffect(() => {
     const currentPath = window.location.pathname;
     const currentLink = links.find(
       (link) =>
-        currentPath === `/${link.toLowerCase()}` ||
-        (link === "Home" && currentPath === "/")
+        currentPath === `/${link.toLowerCase()}` // Special handling for the Home route
     );
-    if (currentLink) {
-      setActive(currentLink);
-    }
-  }, []);
 
+  
+    if (currentLink) {
+      setActive(currentLink); // Set the current active link based on the URL
+    }
+  }, []); // Empty dependency array ensures this only runs once when the component mounts
+
+  // Function to toggle the mobile navigation menu open/close
   const handleClick = () => {
-    setNav(!nav);
+    setNav((prev) => !prev); // Toggle between true/false
   };
 
+  // Function to set the active link
   const handleClick2 = (item: string) => {
-    setActive(item);
+    setActive(item); // Set the clicked item as active
   };
 
   return (
-    <section className="container sticky top-0">
-      <div className="flex justify-between">
+    <section className="container sticky top-0 z-50">
+      {/* Header Container */}
+      <div className="flex justify-between items-center p-4">
+        {/* Logo & Title Section */}
         <Link
-          href={"/"}
+          href="/"
           onClick={() => {
-            handleClick2("Home");
+            handleClick2("Home"); // Set "Home" as active when logo is clicked
+            handleClick(); // Close mobile navigation if it's open
           }}
           className="flex justify-center items-center gap-2"
         >
@@ -51,6 +62,8 @@ const Header = () => {
           />
           <h1 className="lg:text-[36px] text-[24px] font-[700]">QUNAR</h1>
         </Link>
+
+        {/* Desktop Navigation Menu (visible on large screens) */}
         <div className="hidden lg:flex justify-center items-center gap-10">
           {links.map((link, index) => (
             <div
@@ -58,7 +71,7 @@ const Header = () => {
               className={`font-[500] ${
                 link === active ? "bg-[#8F94FB] px-3 py-1 rounded-lg" : ""
               }`}
-              onClick={() => handleClick2(link)}
+              onClick={() => handleClick2(link)} // Set the clicked link as active
             >
               <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
                 {link}
@@ -66,31 +79,41 @@ const Header = () => {
             </div>
           ))}
         </div>
+
+        {/* Contact Us Button for Desktop */}
         <div className="hidden lg:flex">
           <button className="w-[135px] h-[59px] bg-[#8F94FB] rounded-lg text-[18px]">
             Contact Us
           </button>
         </div>
+
+        {/* Mobile Menu Icon (Hamburger or Close icon) */}
         <div className="lg:hidden flex mt-3" onClick={handleClick}>
           {nav ? (
-            <GiHamburgerMenu color="white" size={30} />
+            <IoClose color="white" size={30} /> // Close icon when nav is open
           ) : (
-            <IoClose size={30} color="white" />
+            <GiHamburgerMenu color="white" size={30} /> // Hamburger icon when nav is closed
           )}
         </div>
       </div>
 
-      <div className={nav ? "hidden" : "mt-4"}>
-        <div className="flex flex-col gap-5">
+      {/* Mobile Navigation Menu */}
+      <div
+        className={`lg:hidden fixed left-0 w-full h-screen z-40 transition-transform duration-500 ease-in-out transform ${
+          nav ? "translate-x-0" : "-translate-x-full" // Slide menu in/out from the left
+        }`}
+      >
+        {/* Links inside the mobile menu */}
+        <div className="flex flex-col gap-5 p-8">
           {links.map((link, index) => (
             <div
               onClick={() => {
-                handleClick2(link);
-                handleClick();
+                handleClick2(link); // Set the clicked link as active
+                handleClick(); // Close the mobile menu after clicking
               }}
               key={index}
               className={`w-full text-center hover:bg-[#8F94FB] font-[500] py-2 ${
-                link === active ? "bg-[#8F94FB]" : ""
+                link === active ? "bg-[#8F94FB]" : "" // Highlight the active link
               }`}
             >
               <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
@@ -99,7 +122,9 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-2">
+
+        {/* Contact Us Button for Mobile */}
+        <div className="flex justify-center items-center mt-8">
           <button className="w-[135px] h-[59px] bg-[#8F94FB] rounded-lg text-[18px]">
             Contact Us
           </button>
