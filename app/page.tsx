@@ -153,14 +153,14 @@ export default function Home() {
         </div>
         <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
           {cars.map((car, index) => (
-            <CarCard
+            index <=3 ?(<CarCard
               key={index}
               id={car.id}
               image={car.image}
               title={car.title}
               link={car.link}
               details={car.details}
-            />
+            />):""
           ))}
         </div>
       </div>

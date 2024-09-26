@@ -61,7 +61,7 @@ const page = () => {
           <div className=" space-y-3 mt-4" >
             {serviceDetails.map((service,index)=>(
               <div key={index} className="xl:w-[1320px] xl:h-[483px] md:px-20 px-10 py-16 border-[1px] border-gray-800 space-y-8 rounded-lg text-justify">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <div className="flex justify-center items-center gap-3">
                     <Image className="w-[30px] h-[30px] text-[#8F94FB] " src={service.image} alt="icon" />
                     <p className="md:text-[36px] text-[24px] text-[#8F94FB]">{service.title}</p>

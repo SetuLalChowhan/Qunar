@@ -121,6 +121,38 @@ export const cars: CarDetails[] = [
     details:
       "We developed a visually stunning and user-friendly e-commerce platform  , a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
   },
+  {
+    id: 5,
+    image: car,
+    title: "Chic Boutique",
+    link: "https:/www.chicboutique.com",
+    details:
+      "We developed a visually stunning and user-friendly e-commerce platform  , a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
+  },
+  {
+    id: 6,
+    image: car,
+    title: "Chic Boutique",
+    link: "https:/www.chicboutique.com",
+    details:
+      "We developed a visually stunning and user-friendly e-commerce platform  , a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
+  },
+  {
+    id: 7,
+    image: car,
+    title: "Chic Boutique",
+    link: "https:/www.chicboutique.com",
+    details:
+      "We developed a visually stunning and user-friendly e-commerce platform  , a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
+  },
+  {
+    id: 8,
+    image: car,
+    title: "Chic Boutique",
+    link: "https:/www.chicboutique.com",
+    details:
+      "We developed a visually stunning and user-friendly e-commerce platform  , a renowned fashion retailer. The platform featured seamless product browsing, secure payment integration, and personalized recommendations, resulting in increased online sales and customer satisfaction.",
+  },
 ];
 
 export const reviews: ReviewCard[] = [
