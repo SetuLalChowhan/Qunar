@@ -133,14 +133,18 @@ export default function Home() {
         </div>
 
         <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
-          {workProcess.map((work, index) => (
-           index <=3 ? ( <ProcessCard
-            key={index}
-            id={work.id}
-            title={work.title}
-            des={work.description}
-          />):""
-          ))}
+          {workProcess.map((work, index) =>
+            index <= 3 ? (
+              <ProcessCard
+                key={index}
+                id={work.id}
+                title={work.title}
+                des={work.description}
+              />
+            ) : (
+              ""
+            )
+          )}
         </div>
       </div>
       <div className="container lg:w-[1350px] mt-10 flex flex-col gap-4">
@@ -152,16 +156,20 @@ export default function Home() {
           Here are some example of our notable works:
         </div>
         <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
-          {cars.map((car, index) => (
-            index <=3 ?(<CarCard
-              key={index}
-              id={car.id}
-              image={car.image}
-              title={car.title}
-              link={car.link}
-              details={car.details}
-            />):""
-          ))}
+          {cars.map((car, index) =>
+            index <= 3 ? (
+              <CarCard
+                key={index}
+                id={car.id}
+                image={car.image}
+                title={car.title}
+                link={car.link}
+                details={car.details}
+              />
+            ) : (
+              ""
+            )
+          )}
         </div>
       </div>
       <div className="container lg:w-[1350px] mt-10 flex flex-col gap-4">
@@ -192,11 +200,9 @@ export default function Home() {
           para="Feel free to reach out using the contact form below for any questions or feedback"
         />
         <div>
-          <FaqSection/>
+          <FaqSection />
         </div>
-        
       </div>
-     
     </section>
   );
 }
