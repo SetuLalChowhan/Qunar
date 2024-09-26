@@ -134,12 +134,12 @@ export default function Home() {
 
         <div className="mt-4 grid grid-cols-1  lg:grid-cols-2  gap-2 mb-5 ">
           {workProcess.map((work, index) => (
-            <ProcessCard
-              key={index}
-              id={work.id}
-              title={work.title}
-              des={work.description}
-            />
+           index <=3 ? ( <ProcessCard
+            key={index}
+            id={work.id}
+            title={work.title}
+            des={work.description}
+          />):""
           ))}
         </div>
       </div>

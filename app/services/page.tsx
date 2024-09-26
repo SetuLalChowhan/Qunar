@@ -12,7 +12,7 @@ import Banner2 from "@/components/Banner2";
 const page = () => {
   return (
     <div>
-      <Banner />
+      <Banner title="Our Services" para=" Discover a full range of digital solutions designed to elevate your brand and drive results. From web design and branding to video promotion and 3D design, our expert team delivers tailored services that meet your unique needs." />
       <div className="container">
         <Head
           title="Services"
