@@ -9,7 +9,7 @@ interface Work{
 
 const ProcessCard = ({id,title,des}:Work) => {
   return (
-    <div className=' xl:w-[675px] xl:h-[450px]  mx-auto md:px-16 px-10 py-8 border-2  border-gray-800 rounded-lg shadow-lg  '>
+    <div className=' xl:w-[675px] xl:h-[450px]  mx-auto md:px-16 px-3 py-8 border-2  border-gray-800 rounded-lg shadow-lg  '>
       <div className='flex items-center mb-4'>
         <h1 className='md:text-[150px] font-[600] text-[#8F94FB] leading-none sm:text-[100px] text-[80px] '>0{id}</h1>
         <div className='ml-4'>
