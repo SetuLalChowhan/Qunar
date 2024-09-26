@@ -12,7 +12,7 @@ interface UserDetails {
 
 const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
   return (
-    <div className="w-full lg:w-[424px] lg:h-[352px] px-4 lg:px-8 py-6 border-2 border-gray-800 space-y-12 rounded-lg">
+    <div className="w-full lg:w-[424px] lg:h-[352px] px-8 py-6 border-2 border-gray-800 space-y-12 rounded-lg">
       <div className="w-full h-auto lg:mt-8">
         <svg
           className="w-6 text-blue-500 mb-4"
@@ -25,7 +25,7 @@ const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
             fill="currentColor"
           />
         </svg>
-        <p className="text-[16px] lg:text-[20px] lg:h-32 font-[400] text-[#8F8F8F]  md:text-justify">
+        <p className="text-[16px] lg:text-[20px] lg:h-32 font-[400] text-[#8F8F8F]  ">
           {review}
         </p>
       </div>
