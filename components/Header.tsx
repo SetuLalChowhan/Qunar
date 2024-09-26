@@ -64,7 +64,8 @@ const Header: React.FC = () => {
         {/* Desktop Navigation Menu (visible on large screens) */}
         <div className="hidden lg:flex justify-center items-center gap-10">
           {links.map((link, index) => (
-            <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+            <Link
+              href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
               key={index}
               className={`font-[500] text-white transition duration-300 ease-in-out ${
                 link === active
@@ -73,9 +74,7 @@ const Header: React.FC = () => {
               }`}
               onClick={() => handleClick2(link)} // Set the clicked link as active
             >
-              
-                {link}
-              
+              {link}
             </Link>
           ))}
         </div>
@@ -106,23 +105,19 @@ const Header: React.FC = () => {
         {/* Links inside the mobile menu */}
         <div className="flex flex-col gap-5 p-8">
           {links.map((link, index) => (
-            <div
+            <Link
+              href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
               onClick={() => {
                 handleClick2(link); // Set the clicked link as active
                 handleClick(); // Close the mobile menu after clicking
               }}
               key={index}
-              className={`w-full text-center transition duration-300 ease-in-out font-[500] py-2 rounded-lg ${
+              className={` text-white w-full text-center transition duration-300 ease-in-out font-[500] py-2 rounded-lg ${
                 link === active ? "bg-[#6e73f5]" : "hover:bg-[#6e73f5]"
               }`}
             >
-              <Link
-                href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-                className="text-white"
-              >
-                {link}
-              </Link>
-            </div>
+              {link}
+            </Link>
           ))}
         </div>
 
