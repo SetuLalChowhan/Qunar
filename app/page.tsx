@@ -188,7 +188,7 @@ export default function Home() {
       </div>
       <div className=" container lg:w-[1596px] mt-10">
         <Head
-          title="FaQ"
+          title="FAQ"
           para="Feel free to reach out using the contact form below for any questions or feedback"
         />
         <div>
