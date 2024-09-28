@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <section>
       <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[450px] md:h-[800px] "
+        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[700px] md:h-[800px] "
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60">
@@ -44,38 +44,77 @@ export default function Home() {
               Trusted By 250+ Companies
             </h2>
           </div>
-          <div className="lg:w-[1414px] lg:h-[170px] bg-[#1A1A1A] container mt-24 flex-wrap flex justify-center items-center rounded-lg max-w-4x md:mt-2 opacity-70 ">
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={zapier}
-              alt="zapier"
-            />
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={spotify}
-              alt="zapier"
-            />
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={zoom}
-              alt="zapier"
-            />
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={slack}
-              alt="zapier"
-            />
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={amazon}
-              alt="zapier"
-            />
-            <Image
-              className=" w-[120px] h-[50px] md:w-[219px] md:h-[90px]"
-              src={adobe}
-              alt="zapier"
-            />
-          </div>
+          <div className="lg:w-[1414px] lg:h-[90px] bg-[#1A1A1A] container mt-24 overflow-hidden rounded-lg max-w-full md:mt-2 opacity-80 shadow-lg ">
+  <div className="flex items-center space-x-8 animate-slide">
+    {/* First set of logos */}
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={zapier}
+      alt="zapier"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={spotify}
+      alt="spotify"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={zoom}
+      alt="zoom"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={slack}
+      alt="slack"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={amazon}
+      alt="amazon"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={adobe}
+      alt="adobe"
+    />
+    {/* Duplicate logos */}
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={zapier}
+      alt="zapier"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={spotify}
+      alt="spotify"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={zoom}
+      alt="zoom"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={slack}
+      alt="slack"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={amazon}
+      alt="amazon"
+    />
+    <Image
+      className="w-[150px] h-[65px] md:w-[170px] md:h-[75px] lg:w-[200px] lg:h-[85px]"
+      src={adobe}
+      alt="adobe"
+    />
+  </div>
+</div>
+
+
+
+
+
         </div>
       </div>
       <div className="container mx-auto flex flex-col gap-4  max-w-[1320px] h-auto px-8 py-10 mt-10">

@@ -16,6 +16,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }, // Move by 50% to align with duplicated items
+        },
+      },
+      animation: {
+        slide: 'slide 30s linear infinite', // Smooth, continuous slide
+      },
     },
   },
   plugins: [],
