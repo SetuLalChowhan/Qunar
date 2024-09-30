@@ -1,6 +1,6 @@
-import React from 'react';
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
+import React from "react";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface UserDetails {
   id: number;
@@ -12,7 +12,8 @@ interface UserDetails {
 
 const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
   return (
-    <div className="w-full lg:w-[424px] lg:h-[352px] md:px-8 px-3 py-6 border-2 border-gray-800 space-y-12 rounded-lg text-justify">
+    <div className="w-full lg:w-[424px] lg:h-[352px] md:px-8 px-4 py-6 border border-gray-700 rounded-lg bg-[#1a1a1a] text-justify shadow-lg space-y-8">
+      {/* Review Text with Quotation Icon */}
       <div className="w-full h-auto lg:mt-8">
         <svg
           className="w-6 text-blue-500 mb-4"
@@ -25,19 +26,23 @@ const ReviewCard = ({ id, review, image, name, dep }: UserDetails) => {
             fill="currentColor"
           />
         </svg>
-        <p className="text-[16px] lg:text-[20px] lg:h-32 font-[400] text-[#8F8F8F]  ">
+        <p className="text-[16px] lg:text-[20px] font-light text-gray-300 lg:h-32">
           {review}
         </p>
       </div>
-      <div className="flex flex-row gap-4 lg:gap-6 items-center mt-4 lg:mt-0">
+
+      {/* User Image and Info */}
+      <div className="flex items-center gap-4 lg:gap-6 mt-4 lg:mt-0">
         <Image
-          className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full"
+          className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full object-cover"
           src={image}
-          alt="image"
+          alt="user-image"
         />
         <div>
-          <p className="text-[16px] lg:text-[18px] font-semibold">{name}</p>
-          <p className="text-[14px] lg:text-[17px] text-[#8F8F8F]">{dep}</p>
+          <p className="text-[16px] lg:text-[18px] font-semibold text-white">
+            {name}
+          </p>
+          <p className="text-[14px] lg:text-[17px] text-gray-400">{dep}</p>
         </div>
       </div>
     </div>

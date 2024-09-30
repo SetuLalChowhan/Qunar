@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <section>
       <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[700px] md:h-[800px] "
+        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 h-[450px] md:h-[800px] "
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 h-full w-full bg-black bg-opacity-60">
@@ -44,7 +44,7 @@ export default function Home() {
               Trusted By 250+ Companies
             </h2>
           </div>
-          <div className="lg:w-[1414px] lg:h-[90px] bg-[#1A1A1A] container mt-24 overflow-hidden rounded-lg max-w-full md:mt-2 opacity-80 shadow-lg ">
+          <div className="lg:w-[1414px] lg:h-[90px] bg-[#1A1A1A] container mt-24 overflow-hidden rounded-lg max-w-full md:mt-10  opacity-80 shadow-lg  ">
   <div className="flex items-center space-x-8 animate-slide">
     {/* First set of logos */}
     <Image

@@ -1,25 +1,42 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
-interface CarDetails{
-    id:number;
-    image:string | StaticImageData;
-    title:string;
-    link:string;
-    details:string
-
+interface CarDetails {
+  id: number;
+  image: string | StaticImageData;
+  title: string;
+  link: string;
+  details: string;
 }
 
-const CarCard = ({id,image,title,link,details}:CarDetails) => {
+const CarCard = ({ id, image, title, link, details }: CarDetails) => {
   return (
-    <div className= ' xl:w-[675px] xl:h-[700px]  flex flex-col justify-start items-start md:px-6 px-6 text-justify   py-4   space-y-3   border-[1px] border-gray-800  '>
-        <Image src={image} alt='car' />
-        <h1 className='text-[24px] font-[500]'>{title}</h1>
-        <p className='lg:text-[20px] bg-[#262626] px-4 rounded-lg p-2  '>{link}</p>
-        <p className=' md:text-[20px] text-[#98989A] '>{details}</p>
+    <div className='xl:w-[675px] xl:h-[700px] flex flex-col justify-start items-start md:px-6 px-6 py-6 border border-gray-700 rounded-lg shadow-lg bg-[#1a1a1a]'>
+      {/* Image */}
+      <div className='w-full h-[350px] relative'>
+        <Image src={image} alt='car' layout='fill' objectFit='cover' className='rounded-t-lg' />
+      </div>
+
+      {/* Title */}
+      <h1 className='text-[28px] font-semibold text-white mt-4'>{title}</h1>
+
+      {/* Link */}
+      <a 
+        href={link} 
+        className='text-blue-400 hover:text-blue-600 text-[18px] mt-2 underline'
+        target='_blank' 
+        rel='noopener noreferrer'
+      >
+        {link}
+      </a>
+
+      {/* Details */}
+      <p className='text-[18px] text-gray-300 mt-4 leading-relaxed'>
+        {details}
+      </p>
     </div>
-  )
+  );
 }
 
-export default CarCard
+export default CarCard;

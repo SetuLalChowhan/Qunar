@@ -1,27 +1,31 @@
+import React from 'react';
 
-import React from 'react'
- 
-interface Work{
-  id:number;
-  title:string;
-  des:string
+interface Work {
+  id: number;
+  title: string;
+  des: string;
 }
 
-const ProcessCard = ({id,title,des}:Work) => {
+const ProcessCard = ({ id, title, des }: Work) => {
   return (
-    <div className=' xl:w-[675px] xl:h-[450px]  mx-auto md:px-16 px-3 py-8 border-2  border-gray-800 rounded-lg shadow-lg  '>
-      <div className='flex items-center mb-4'>
-        <h1 className='md:text-[150px] font-[600] text-[#8F94FB] leading-none sm:text-[100px] text-[80px] '>0{id}</h1>
-        <div className='ml-4'>
-          <p className='md:text-[30px] font-bold text-[24px] '>{title}</p>
-          <div className='border-[1px] border-gray-800 w-full mt-2'></div>
+    <div className="xl:w-[675px] xl:h-[450px] mx-auto md:px-16 px-6 py-8 border border-gray-700 rounded-lg shadow-lg bg-[#1a1a1a]">
+      {/* ID and Title */}
+      <div className="flex items-center mb-6">
+        <h1 className="md:text-[150px] font-bold text-[#8F94FB] leading-none sm:text-[100px] text-[80px]">
+          0{id}
+        </h1>
+        <div className="ml-6">
+          <p className="md:text-[30px] text-[24px] font-semibold text-white">{title}</p>
+          <div className="border-t-[1px] border-gray-600 w-full mt-2"></div>
         </div>
       </div>
-      <div className='text-[#8F8F8F] md:text-[20px] font-[600] text-justify '>
+
+      {/* Description */}
+      <div className="text-[#B0B0B0] md:text-[20px] text-[18px] font-medium text-justify leading-relaxed">
         {des}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProcessCard;
