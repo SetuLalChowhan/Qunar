@@ -69,8 +69,8 @@ const Header: React.FC = () => {
               key={index}
               className={`font-[500] text-white transition duration-300 ease-in-out ${
                 link === active
-                  ? "bg-[#6e73f5] px-3 py-1 rounded-lg"
-                  : "hover:bg-[#6e73f5] hover:rounded-lg px-3 py-1"
+                  ? "bg-[#6e73f5] px-4 py-2   rounded-lg"
+                  : "hover:bg-[#6e73f5] hover:rounded-lg px-6 py-3"
               }`}
               onClick={() => handleClick2(link)} // Set the clicked link as active
             >

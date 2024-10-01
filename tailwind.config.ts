@@ -24,6 +24,7 @@ const config: Config = {
       },
       animation: {
         slide: 'slide 30s linear infinite', // Smooth, continuous slide
+        
       },
     },
   },

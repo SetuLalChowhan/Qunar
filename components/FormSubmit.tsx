@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useTypingEffect } from "../hooks/useTypingEffect";
 
 interface FormData {
   fullName: string;
@@ -10,6 +11,9 @@ interface FormData {
 }
 
 const FormSubmit: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
   // State to manage form data
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -41,8 +45,35 @@ const FormSubmit: React.FC = () => {
     console.log("Form Data Submitted:", formData);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 } // Trigger when 10% of the component is visible
+    );
+
+    if (formRef.current) {
+      observer.observe(formRef.current);
+    }
+
+    return () => {
+      if (formRef.current) {
+        observer.unobserve(formRef.current);
+      }
+    };
+  }, []);
+
+  const fullNamePlaceholder = useTypingEffect(isVisible ? "Type your full name here..." : "");
+  const emailPlaceholder = useTypingEffect(isVisible ? "Enter your email address..." : "");
+  const messagePlaceholder = useTypingEffect(isVisible ? "Write your message here..." : "");
+
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
       className="mt-8 space-y-5 inline-block transition-all ease-in-out duration-300"
     >
@@ -54,7 +85,7 @@ const FormSubmit: React.FC = () => {
             value={formData.fullName}
             onChange={handleChange}
             className="w-full bg-[#333333] outline-none text-[22px] focus:border-b-blue-500 transition-all duration-300"
-            placeholder="Type Here"
+            placeholder={fullNamePlaceholder}
           />
           <p className="border-b-[1px] border-b-gray-500"></p>
         </div>
@@ -65,7 +96,7 @@ const FormSubmit: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full bg-[#333333] outline-none text-[22px] focus:border-b-blue-500 transition-all duration-300"
-            placeholder="Type Here"
+            placeholder={emailPlaceholder}
           />
           <p className="border-b-[1px] border-b-gray-500"></p>
         </div>
@@ -103,7 +134,7 @@ const FormSubmit: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           className="w-full bg-[#333333] outline-none text-[22px] focus:border-b-blue-500 transition-all duration-300"
-          placeholder="Type Here"
+          placeholder={messagePlaceholder}
         />
         <p className="border-b-[1px] border-b-gray-500"></p>
       </div>

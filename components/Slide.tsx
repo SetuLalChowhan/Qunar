@@ -53,7 +53,7 @@ const Slide = ({number,tailwindValue}:Details) => {
         {
             reviews.map((review,index)=>(
                 <SwiperSlide key={index}>
-                    <ReviewCard id={review.id} review={review.review} image={review.image} name={review.name} dep={review.dep}  />
+                    <ReviewCard rating={12} id={review.id} review={review.review} image={review.image} name={review.name} dep={review.dep}  />
 
                 </SwiperSlide>
             ))
