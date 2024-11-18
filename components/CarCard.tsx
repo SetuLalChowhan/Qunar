@@ -12,7 +12,7 @@ interface CarDetails {
 
 const CarCard = ({ id, image, title, link, details }: CarDetails) => {
   return (
-    <div className=" flex flex-col justify-start items-start md:px-6 px-6 py-6 border border-gray-700  shadow-lg bg-[#1a1a1a]">
+    <section className=" flex flex-col justify-start items-start md:px-6 px-6 py-6 border border-gray-700  shadow-lg bg-[#1a1a1a]">
       {/* Image */}
       <div className="w-full h-[350px] relative">
         <Image
@@ -40,7 +40,7 @@ const CarCard = ({ id, image, title, link, details }: CarDetails) => {
       <p className="text-[18px] text-gray-300 mt-4 leading-relaxed">
         {details}
       </p>
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ import location from '../public/images/locationIcon.png';
 
 const Footer = () => {
   return (
-    <div className="border-[1px] border-gray-800">
+    <footer className="border-[1px] border-gray-800">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row justify-between py-6 md:py-8 lg:py-12 px-4 md:px-10 lg:px-14 xl:px-20 2xl:px-80">
         {/* Logo and Title */}
@@ -74,7 +74,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -6,7 +6,7 @@ interface Details{
 
 const Banner = ({title,para}:Details) => {
   return (
-    <div className=" container relative overflow-hidden rounded-lg w-full h-[448px]">
+    <section className=" container relative overflow-hidden rounded-lg w-full h-[448px]">
       {/* Background with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
@@ -24,7 +24,7 @@ const Banner = ({title,para}:Details) => {
          {para}
         </p>
       </div>
-    </div>
+    </section>
   )
 }
 

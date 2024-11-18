@@ -7,7 +7,7 @@ const SwiperNavButton = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="flex gap-4 mt-5 justify-center items-center">
+    <section className="flex gap-4 mt-5 justify-center items-center">
       {/* Prev Button */}
       <button
         className="bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition duration-300 ease-in-out transform "
@@ -25,7 +25,7 @@ const SwiperNavButton = () => {
       >
         <IoIosArrowForward size={20} />
       </button>
-    </div>
+    </section>
   );
 };
 

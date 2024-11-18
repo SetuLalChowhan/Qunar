@@ -39,7 +39,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <section className=" sticky top-0 z-50 bg-[#171717]">
+    <header className=" sticky top-0 z-50 bg-[#171717]">
       {/* Header Container */}
       <div className=" container flex justify-between items-center p-4">
         {/* Logo & Title Section */}
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation Menu (visible on large screens) */}
-        <div className="hidden lg:flex justify-center items-center gap-10">
+        <nav className="hidden lg:flex justify-center items-center gap-10">
           {links.map((link, index) => (
             <Link
               href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
               {link}
             </Link>
           ))}
-        </div>
+        </nav>
 
         {/* Contact Us Button for Desktop */}
         <div className="hidden lg:flex">
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
         }`}
       >
         {/* Links inside the mobile menu */}
-        <div className="flex flex-col gap-5 p-8">
+        <nav className="flex flex-col gap-5 p-8">
           {links.map((link, index) => (
             <Link
               href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
               {link}
             </Link>
           ))}
-        </div>
+        </nav>
 
         {/* Contact Us Button for Mobile */}
         <div className="flex justify-center items-center mt-8">
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

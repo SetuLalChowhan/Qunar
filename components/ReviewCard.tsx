@@ -21,7 +21,7 @@ interface UserDetails {
 
 const ReviewCard = ({ id, review, image, name, dep, rating }: UserDetails) => {
   return (
-    <div className="w-full lg:w-[424px] lg:h-[352px] md:px-8 px-4 py-6 border border-gray-700 rounded-lg bg-[#1a1a1a] text-justify shadow-lg space-y-8">
+    <section className="w-full lg:w-[424px] lg:h-[352px] md:px-8 px-4 py-6 border border-gray-700 rounded-lg bg-[#1a1a1a] text-justify shadow-lg space-y-8">
       {/* Review Text with Quotation Icon */}
       <div className="w-full h-auto lg:mt-8">
         <svg
@@ -73,7 +73,7 @@ const ReviewCard = ({ id, review, image, name, dep, rating }: UserDetails) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
